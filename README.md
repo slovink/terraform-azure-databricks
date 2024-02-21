@@ -152,6 +152,9 @@ You need to run the following command in the testing folder:
 ```hcl
   go test -run Test
 ```
+## License
+This project is licensed under the  Apache License - see the [LICENSE](https://github.com/slovink/terraform-azure-databricks/blob/master/LICENSE) file for details.
+
 
 
 
