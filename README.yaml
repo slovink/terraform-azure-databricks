@@ -20,7 +20,7 @@ badges:
     url: "https://www.terraform.io"
   - name: "Licence"
     image: "https://img.shields.io/badge/License-APACHE-blue.svg"
-    url: "LICENSE.md"
+    url: "https://github.com/slovink/terraform-azure-databricks/blob/master/LICENSE"
 
 #  description of this project
 description: |-
@@ -37,37 +37,37 @@ usage: |-
   ```hcl
     # Basic
     module "databricks" {
-  source                                               = "terraform/databricks/azure"
-  name                                                 = "app"
-  environment                                          = "test"
-  label_order                                          = ["name", "environment"]
-  enable                                               = true
-  resource_group_name                                  = module.resource_group.resource_group_name
-  location                                             = module.resource_group.resource_group_location
-  sku                                                  = "standard"
-  network_security_group_rules_required                = "NoAzureDatabricksRules"
-  public_network_access_enabled                        = false
-  managed_resource_group_name                          = "databricks-resource-group"
-  virtual_network_id                                   = module.vnet.vnet_id[0]
-  public_subnet_name                                   = module.subnet_pub.default_subnet_name[0]
-  private_subnet_name                                  = module.subnet_pvt.default_subnet_name[0]
-  public_subnet_network_security_group_association_id  = module.network_security_group_public.id
-  private_subnet_network_security_group_association_id = module.network_security_group_private.id
-  no_public_ip                                         = true
-  storage_account_name                                 = "fabricated"
+    source                                               = "terraform/databricks/azure"
+    name                                                 = "app"
+    environment                                          = "test"
+    label_order                                          = ["name", "environment"]
+    enable                                               = true
+    resource_group_name                                  = module.resource_group.resource_group_name
+    location                                             = module.resource_group.resource_group_location
+    sku                                                  = "standard"
+    network_security_group_rules_required                = "NoAzureDatabricksRules"
+    public_network_access_enabled                        = false
+    managed_resource_group_name                          = "databricks-resource-group"
+    virtual_network_id                                   = module.vnet.vnet_id[0]
+    public_subnet_name                                   = module.subnet_pub.default_subnet_name[0]
+    private_subnet_name                                  = module.subnet_pvt.default_subnet_name[0]
+    public_subnet_network_security_group_association_id  = module.network_security_group_public.id
+    private_subnet_network_security_group_association_id = module.network_security_group_private.id
+    no_public_ip                                         = true
+    storage_account_name                                 = "fabricated"
 
-  cluster_enable          = true
-  autotermination_minutes = 20
-  # spark_version = "11.3.x-scala2.12" # Enter manual spark version or will choose latest spark version
-  # num_workers             = 0  # Required when enable_autoscale is false
+    cluster_enable          = true
+    autotermination_minutes = 20
+    # spark_version = "11.3.x-scala2.12" # Enter manual spark version or will choose latest spark version
+    # num_workers             = 0  # Required when enable_autoscale is false
 
-  enable_autoscale = true
-  min_workers      = 1
-  max_workers      = 2
+    enable_autoscale = true
+    min_workers      = 1
+    max_workers      = 2
 
-  cluster_profile = "multiNode"
+    cluster_profile = "multiNode"
   }
-    ```
+  ```
 
 
 

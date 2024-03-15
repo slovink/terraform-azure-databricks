@@ -14,35 +14,11 @@
 <p align="center">
 
 <a href="https://www.terraform.io">
-  <img src="https://img.shields.io/badge/Terraform-v1.1.7-green" alt="Terraform">
+  <img src="https://img.shields.io/badge/Terraform-v1.7.4-green" alt="Terraform">
 </a>
-<a href="LICENSE.md">
+<a href="https://github.com/slovink/terraform-azure-databricks/blob/master/LICENSE">
   <img src="https://img.shields.io/badge/License-APACHE-blue.svg" alt="Licence">
 </a>
-
-
-</p>
-<p align="center">
-
-<a href='https://facebook.com/sharer/sharer.php?u=https://github.com/slovink/terraform-azure-databricks'>
-  <img title="Share on Facebook" src="https://user-images.githubusercontent.com/50652676/62817743-4f64cb80-bb59-11e9-90c7-b057252ded50.png" />
-</a>
-<a href='https://www.linkedin.com/shareArticle?mini=true&title=Terraform+AZURE+DATABRICKS&url=https://github.com/slovink/terraform-azure-databricks'>
-  <img title="Share on LinkedIn" src="https://user-images.githubusercontent.com/50652676/62817742-4e339e80-bb59-11e9-87b9-a1f68cae1049.png" />
-</a>
-<a href='https://twitter.com/intent/tweet/?text=Terraform+AZURE+DATABRICKS&url=https://github.com/slovink/terraform-azure-databricks'>
-  <img title="Share on Twitter" src="https://user-images.githubusercontent.com/50652676/62817740-4c69db00-bb59-11e9-8a79-3580fbbf6d5c.png" />
-</a>
-
-</p>
-<hr>
-
-
-We eat, drink, sleep and most importantly love **DevOps**. We are working towards strategies for standardizing architecture while ensuring security for the infrastructure. We are strong believer of the philosophy <b>Bigger problems are always solved by breaking them into smaller manageable problems</b>. Resonating with microservices architecture, it is considered best-practice to run database, cluster, storage in smaller <b>connected yet manageable pieces</b> within the infrastructure.
-
-This module is basically combination of [Terraform open source](https://www.terraform.io/) and includes automatation tests and examples. It also helps to create and improve your infrastructure with minimalistic code instead of maintaining the whole infrastructure code yourself.
-
-We have [*fifty plus terraform modules*][terraform_modules]. A few of them are comepleted and are available for open source usage while a few others are in progress.
 
 
 
@@ -50,10 +26,6 @@ We have [*fifty plus terraform modules*][terraform_modules]. A few of them are c
 ## Prerequisites
 
 This module has a few dependencies:
-
-
-
-
 
 
 ## Examples
@@ -67,7 +39,7 @@ Here are some examples of how you can use this module in your inventory structur
 ```hcl
   # Basic
   module "databricks" {
-source                                               = "../"
+source                                               = "https://github.com/slovink/terraform-azure-databricks.git?ref=1.0.0"
 name                                                 = "app"
 environment                                          = "test"
 label_order                                          = ["name", "environment"]
@@ -156,6 +128,8 @@ You need to run the following command in the testing folder:
 This project is licensed under the  Apache License - see the [LICENSE](https://github.com/slovink/terraform-azure-databricks/blob/master/LICENSE) file for details.
 
 
+# Examples
+For detailed examples on how to use this module, please refer to the '[example](https://github.com/slovink/terraform-azure-databricks/blob/master/example)' directory within this repository.
 
 
 ## Feedback
@@ -185,7 +159,7 @@ At [slovink][website], we offer expert guidance, implementation support and serv
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.6.6 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.7.4 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >=3.87.0 |
 | <a name="requirement_databricks"></a> [databricks](#requirement\_databricks) | 1.36.3 |
 
