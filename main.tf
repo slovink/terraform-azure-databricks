@@ -21,7 +21,6 @@ resource "azurerm_databricks_workspace" "main" {
   network_security_group_rules_required = var.network_security_group_rules_required
   public_network_access_enabled         = var.public_network_access_enabled
   managed_resource_group_name           = var.managed_resource_group_name
-
   custom_parameters {
     virtual_network_id                                   = var.virtual_network_id
     private_subnet_name                                  = var.private_subnet_name

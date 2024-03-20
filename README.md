@@ -129,7 +129,7 @@ This project is licensed under the  Apache License - see the [LICENSE](https://g
 
 
 # Examples
-For detailed examples on how to use this module, please refer to the '[example](https://github.com/slovink/terraform-azure-databricks/blob/master/example)' directory within this repository.
+For detailed examples on how to use this module, please refer to the '[example](https://github.com/slovink/terraform-azure-databricks/blob/master/_example)' directory within this repository.
 
 
 ## Feedback

@@ -64,7 +64,6 @@ usage: |-
     enable_autoscale = true
     min_workers      = 1
     max_workers      = 2
-
     cluster_profile = "multiNode"
   }
   ```
